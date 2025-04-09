@@ -1,0 +1,10 @@
+{
+    "conventionalCommits.scopes": [
+        "ci",
+        "git",
+        "matlab",
+        "github",
+        "doc",
+        "action-patch"
+    ],
+}
