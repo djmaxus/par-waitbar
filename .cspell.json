@@ -2,11 +2,15 @@
     "version": "0.2",
     "language": "en",
     "words": [
+        "djmaxus",
+        "Elizarev",
+        "Maksim",
+        "waitbar"
     ],
     "flagWords": [],
     "ignorePaths": [
-        "CHANGELOG.md"
+        "CHANGELOG.md",
+        "*.m"
     ],
-    "ignoreWords": [
-    ]
+    "ignoreWords": []
 }
