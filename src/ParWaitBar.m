@@ -87,6 +87,7 @@ classdef ParWaitBar < handle
             if self.final_state == 0
                 return;
             end
+            self.elapsed = toc(self.start_time);
             elapsed_str = duration(seconds(self.elapsed), 'Format', 'hh:mm:ss');
             message = sprintf('%u/%u iterations\n in %s', self.state, ...
                 self.final_state, elapsed_str);
