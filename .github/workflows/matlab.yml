@@ -15,4 +15,6 @@ jobs:
         with:
           release: ${{ matrix.release }}
           cache: true
+          products: >
+            Parallel_Computing_Toolbox
       - uses: matlab-actions/run-build@v2
