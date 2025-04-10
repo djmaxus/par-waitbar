@@ -28,7 +28,7 @@ classdef ParWaitBar < handle
     end
 
     methods
-        function [self, update_queue] = ParWaitBar(max_iterations)
+        function [self, update_queue] = ParWaitBar(max_iterations,varargin)
             self.final_state = max_iterations;
             update_queue = parallel.pool.DataQueue;
 
@@ -38,8 +38,9 @@ classdef ParWaitBar < handle
 
             self.state = 0;
 
-            self.wb = waitbar(self.state, sprintf('%u cells to upscale', self.final_state), ...
-                'Name', 'StrataTrapper');
+            msg = sprintf('%u total iterations', max_iterations);
+
+            self.wb = waitbar(self.state, msg, varargin{:});
             self.start_time = tic();
 
             self.last_reported_state = self.state;
@@ -73,7 +74,7 @@ classdef ParWaitBar < handle
             eta_estimate = (self.final_state - self.state) * pace_integral;
             eta = duration(seconds(eta_estimate), 'Format', 'hh:mm:ss');
             elapsed_str = duration(seconds(self.elapsed), 'Format', 'hh:mm:ss');
-            message = sprintf('%u/%u cells upscaled\n passed: %s | ETA: %s', ...
+            message = sprintf('iteration %u/%u \n passed: %s | ETA: %s', ...
                 self.state, self.final_state, elapsed_str, eta);
 
             if ~isvalid(self.wb)
@@ -87,7 +88,9 @@ classdef ParWaitBar < handle
                 return;
             end
             elapsed_str = duration(seconds(self.elapsed), 'Format', 'hh:mm:ss');
-            message = sprintf('%u cells upscaled\n in %s', self.state, elapsed_str);
+            message = sprintf('%u/%u iterations\n in %s', self.state, ...
+                self.final_state, elapsed_str);
+
             if ~isvalid(self.wb)
                 return;
             end
