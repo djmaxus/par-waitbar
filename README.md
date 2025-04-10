@@ -1,6 +1,7 @@
 # `waitbar` for parallel loops in MATLAB
 
 ![CI](https://github.com/djmaxus/par-waitbar/actions/workflows/ci.yml/badge.svg?branch=main)
+[![View par-waitbar on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://uk.mathworks.com/matlabcentral/fileexchange/180745-par-waitbar)
 ![GitHub Tag](https://img.shields.io/github/v/tag/djmaxus/par-waitbar?sort=semver&style=flat&label=version)
 ![GitHub Release Date](https://img.shields.io/github/release-date/djmaxus/par-waitbar?display_date=published_at&style=flat&label=dated)
 ![GitHub License](https://img.shields.io/github/license/djmaxus/par-waitbar)
