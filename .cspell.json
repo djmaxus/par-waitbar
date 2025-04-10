@@ -2,16 +2,11 @@
     "version": "0.2",
     "language": "en",
     "words": [
-        "ruleset",
-        "Rulesets",
-        "Simulink"
     ],
     "flagWords": [],
     "ignorePaths": [
         "CHANGELOG.md"
     ],
     "ignoreWords": [
-        "oneline",
-        "buildtool"
     ]
 }
